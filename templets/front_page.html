@@ -1,0 +1,144 @@
+{% include "base.html" %}
+
+
+{% block content %}
+<html>
+{% load static %}
+<head>
+  
+</head>
+{% if user.is_authenticated %}
+  <p><a href="{% url 'logout' %}">logout</a></p>
+  <body style="background: #999">
+  <div style="display: flex;">
+
+      <div style="  float: left;
+      width: 33.33%;
+      padding: 30px;
+      position: relative;">
+      {% load static %}
+      <a href=" /maths/">
+        <img border="3px" src="{% static 'school-books-png-.png' %}" alt="Snow"  style="width:100%"> </a>
+        <div style="position: absolute;
+        bottom: 20px;
+        right: 20px;
+        background-color: rgb(0, 0, 0, 0.5);
+        color: white;
+        padding-left: 20px;
+        padding-right: 20px;">
+          <h4>Maths</h4>
+          <p>Probability Distributions,Transforms and Numerical Methods</p>
+        </div>
+      </div>
+
+
+      <div style="  float: left;
+      width: 33.33%;
+      padding: 30px;
+      position: relative;">
+      <a href=" /coa/">
+        <img border="3px" src="{% static 'school-books-png-.png' %}" alt="Snow" style="width:100%"></a>
+        <div style="position: absolute;
+        bottom: 20px;
+        right: 20px;
+        background-color: rgb(0, 0, 0, 0.5);
+        color: white;
+        padding-left: 20px;
+        padding-right: 20px;">
+          <h4>COA</h4>
+          <p>Computer Organization and Architectur</p>
+        </div>
+      </div>
+
+
+       <div style="  float: left;
+      width: 33.33%;
+      padding: 30px;
+      position: relative;">
+      <a href=" /operating_systems/">
+        <img border="3px" src="{% static 'school-books-png-.png' %}" alt="Snow" style="width:100%"></a>
+        <div style="position: absolute;
+        bottom: 20px;
+        right: 20px;
+        background-color: rgb(0, 0, 0, 0.5);
+        color: white;
+        padding-left: 20px;
+        padding-right: 20px;">
+          <h4>OS</h4>
+          <p>Operating Systems</p>
+        </div>
+      </div>
+
+
+    </div>
+    
+
+    
+
+  <div style="display: flex;">
+
+      <div style="  float: left;
+      width: 33.33%;
+      padding: 30px;
+      position: relative;">
+        <a href=" /oop/">
+        <img border="3px" src="{% static 'school-books-png-.png' %}" alt="Snow" style="width:100%"></a>
+        <div style="position: absolute;
+        bottom: 20px;
+        right: 20px;
+        background-color: rgb(0, 0, 0, 0.5);
+        color: white;
+        padding-left: 20px;
+        padding-right: 20px;">
+          <h4>OOP</h4>
+          <p>Object Oriented Design and Programming</p>
+        </div>
+      </div>
+
+
+      <div style="  float: left;
+      width: 33.33%;
+      padding: 30px;
+      position: relative;">
+      <a href=" /pdd/">
+        <img border="3px" src="{% static 'school-books-png-.png' %}" alt="Snow" style="width:100%"></a>
+        <div style="position: absolute;
+        bottom: 20px;
+        right: 20px;
+        background-color: rgb(0, 0, 0, 0.5);
+        color: white;
+        padding-left: 20px;
+        padding-right: 20px;">
+          <h4>PDD</h4>
+          <p>Principles of Database Design</p>
+        </div>
+      </div>
+
+
+       <div style="  float: left;
+      width: 33.33%;
+      padding: 30px;
+      position: relative;">
+      <a href=" /economics/">
+        <img border="3px" src="{% static 'school-books-png-.png' %}" alt="Snow" style="width:100%"></a>
+        <div style="position: absolute;
+        bottom: 20px;
+        right: 20px;
+        background-color: rgb(0, 0, 0, 0.5);
+        color: white;
+        padding-left: 20px;
+        padding-right: 20px;">
+          <h4>Economics</h4>
+          <p>There can be economy only where there is efficiency.</p>
+        </div>
+      </div>
+
+
+    </div>
+    </body>
+  {% else %}
+    <p>You are not logged in</p>
+    <a href="{% url 'login' %}">login</a>
+  {% endif %}
+  </html>
+{% endblock %}

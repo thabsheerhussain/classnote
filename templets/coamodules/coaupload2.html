@@ -1,0 +1,31 @@
+{% include "base.html" %}
+
+{% block content%}
+{% if user.is_authenticated %}
+<body style="background-color: #999999;">
+<head><style type="text/css">
+	.btn{
+        background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+    }
+</style></head>
+<center>
+<h2>UPLOAD FILES</h2>
+<form method="post" enctype="multipart/form-data">
+
+{% csrf_token %}
+{{ form.as_p }}
+<button type="submit" class="btn">UPLOAD</button>
+</form>
+</center>
+{% else %}
+  <p>You are not logged in</p>
+  <a href="{% url 'login' %}">login</a>
+{% endif %}
+{% endblock%}
+</body>

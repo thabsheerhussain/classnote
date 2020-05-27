@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+
+
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style> 
+			.brd { 
+		border: 3px solid #999; 
+		width: 50%;
+		margin-top: 20%;
+	} 
+
+	button { 
+		background-color: #4CAF50; 
+		color: white; 
+		padding: 14px 20px; 
+		margin: 8px 0; 
+		border: none; 
+		cursor: pointer; 
+		width: 50%; 
+	} 
+	body{
+		width: 100%;
+	}
+</style>
+	</head>
+	<body>
+<center>
+	<div class="brd">
+<h2>Login</h2>
+
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Login</button>
+</form>
+</div>
+</center>
+</body>
+
+{% endblock %}
